@@ -29,6 +29,7 @@ Subject : 建置Web的管理介面for php
 
 **type=gz,folder**  
 > > status=啟用/關閉   
+
 有錯誤發生該row請使用[tag:紅色]
 
 #工具：
