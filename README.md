@@ -13,7 +13,7 @@ Subject : 建置Web的管理介面for php
   * 提供明細查詢
   * 可新增刪減修改費份時間週期
 4. 記錄使用者每次登入記錄ip
-5. 使用db去紀錄(原需求：僅使用file去記錄)
+5. 使用db去紀錄~~(原需求：僅使用file去記錄)~~
 6. Dropbox空間額度檢核並發信通知
 7. 每日背援通知記錄 早上0900發信（可通過後台檢核)
 8. 使用Boostrap 3 為UI建置基礎
@@ -30,8 +30,15 @@ Subject : 建置Web的管理介面for php
 **type=gz,folder**  
 > > status=啟用/關閉   
 
-有錯誤發生該row請使用[tag:紅色]
+**有錯誤發生該row請使用_紅色_**
 
 #工具：
 1. Codeigniter
 2. Dropbox API: https://www.dropbox.com/developers/core/start/php
+
+######TEST:
+```perl
+use Data::Dumper;
+print Dumper $bear;
+```
+[Imgur](http://i.imgur.com/9nMly70.jpg?1)
