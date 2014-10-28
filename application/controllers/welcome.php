@@ -21,6 +21,11 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('index');
 	}
+
+	public function login(){
+		$arr = array("bear"=>123, "david"=>"DaviD");
+		echo json_encode($arr);
+	}
 }
 
 /* End of file welcome.php */

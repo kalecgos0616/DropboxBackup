@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>	
 	<style type="text/css">
 	body {
 		padding-top: 40px;
@@ -50,13 +51,32 @@
 	}
 
 	</style>
+	<script type="text/javascript">
+		$(function(){
+			$("button").on('click', function(event) {
+
+				$.ajax({
+					url: '/welcome/login',
+					type: 'GET',
+					dataType: 'json',
+					data: $("form").serialize(),
+				})
+				.done(function() {
+					console.log("success");
+				});
+
+				return false;
+				
+			});
+		});
+	</script>
 </head>
 <body>
 	<div class="container">
 		<form class="form-signin" role="form">
 			<h2 class="form-signin-heading">Please sign in</h2>
-			<input type="text" class="form-control" placeholder="Account" required autofocus>
-			<input type="password" class="form-control" placeholder="Password" required>
+			<input type="text" name="username" class="form-control" placeholder="Account" required autofocus>
+			<input type="password" name="password" class="form-control" placeholder="Password" required>
 			<label class="checkbox">
 				<input type="checkbox" value="remember-me"> Remember me
 			</label>
