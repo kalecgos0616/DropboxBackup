@@ -23,8 +23,12 @@ class Welcome extends CI_Controller {
 	}
 
 	public function login(){
-		$arr = array("bear"=>123, "david"=>"DaviD");
-		echo json_encode($arr);
+
+		$this->load->model('User_model');
+
+		$result = $this->User_model->login(); 
+		
+		echo json_encode($result);
 	}
 }
 
