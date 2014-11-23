@@ -57,7 +57,7 @@
 
 				$.ajax({
 					url: '/welcome/login',
-					type: 'GET',
+					type: 'POST',
 					dataType: 'json',
 					data: $("form").serialize(),
 				})

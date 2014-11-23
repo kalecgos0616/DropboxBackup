@@ -19,10 +19,42 @@ class Welcome extends MY_Controller {
 	 */
 	public function index()
 	{
+		echo "bear2";
 		$this->load->view('index');
 	}
 
 	public function login(){
+		$this->load->helper(array('form', 'url'));
+
+		$this->load->library('form_validation');
+
+		$this->form_validation->set_rules('username', 'Username', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'required');
+
+		echo "\$this->form_validation->run():".$this->form_validation->run();
+		exit;
+
+		//This method will have the credentials validation
+		$this->load->library('form_validation');
+
+		$this->form_validation->set_rules('username', 'Username', '');
+		// $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean');
+
+		echo "\$this->form_validation->run():".$this->form_validation->run();
+		exit;
+
+		if($this->form_validation->run() == FALSE)
+		{
+			//Field validation failed.  User redirected to login page
+			echo "<script>alert('Invalid username or password');</script>";
+			echo "<meta http-equiv='refresh' content='0;url=admin'>";
+		}
+		else
+		{
+			//Go to private area
+			redirect('/admin/group_list', 'refresh');
+		}
+		exit;
 
 		$this->load->model('User_model');
 
