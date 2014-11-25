@@ -21,7 +21,10 @@ Subject : 建置Web的管理介面for php
 10. 存取權限檢查
 
 #Resources:
-1. Bootstrap可套用Template http://www.sum16.com/resource/pixeladmin-premium-admin-theme-download.html
+1. Bootstrap可套用Template ~~http://www.sum16.com/resource/pixeladmin-premium-admin-theme-download.html~~<br/>
+free：http://almsaeedstudio.com/AdminLTE/<br/>
+http://startbootstrap.com/template-overviews/sb-admin-2/
+
 2. CI 下載
 
 *name path type size diatomite status recentbackuptime*
